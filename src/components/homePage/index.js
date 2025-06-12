@@ -1,21 +1,33 @@
-
+import backgroundImage from '../assets/background.jpg';
 
 const Home = () => {
     return (
-        <div className="flex flex-col bg-inherit min-h-screen">
-            <section 
-                id="Home" 
-                className="flex flex-col h-[calc(100vh-64px)] justify-center items-center px-6 text-center mt-16"
-            >
-                <div className="w-full max-w-4xl">
-                    <h1 className="mb-4 text-lg font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white ">
-                        I am Brady Friese, based out of Japan.
+        <div className="relative h-[100vh] w-full overflow-hidden">
+            {/* Background Image */}
+            <div 
+                className="absolute inset-0 z-0"
+                style={{
+                    backgroundImage: `url(${backgroundImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                }}
+            />
+            
+            {/* Content with semi-transparent overlay */}
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50">
+                <div className="w-full max-w-4xl px-6">
+                    <h1 className="mb-4 text-lg font-bold text-white md:text-5xl lg:text-6xl">
+                     Welcome!
                     </h1>
-                    <p className="mb-4 dark:text-white">
-                        I am a software engineer specializing in full 
+                    <h1 className="mb-4 text-lg font-bold text-white md:text-5xl lg:text-6xl">
+                        I am Brady Friese.
+                    </h1>
+                    <p className="mb-4 text-white">
+                        I am a software engineer specializing in full stack development.
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
     );
 };

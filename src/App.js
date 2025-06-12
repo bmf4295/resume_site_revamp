@@ -1,31 +1,38 @@
 import './App-tailwid.css';
 import React from 'react';
-import NavBar from './components/navBar'
-import Home from './components/homePage'
-import Skils from './components/skillsPage'
-import About from './components/aboutPage'
-import Experience from './components/experiencePage'
-import Contact from './components/contactPage'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import NavBar from './components/navBar';
+import Home from './components/homePage';
+import About from './components/aboutPage';
+import Skills from './components/skillsPage';
+import Experience from './components/experiencePage';
+import Contact from './components/contactPage';
+import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="App dark:bg-slate-800">
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/skills' element={<Skils/>}/>
-          <Route path='/experience' element={<Experience/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-        </Routes>
-      </Router>
+    <div className="App dark:bg-slate-800 h-screen flex flex-col overflow-hidden">
+      <NavBar />
+      <div className="flex-grow overflow-y-auto">
+        <section id="home" className="h-screen relative">
+          <Home />
+        </section>
+        
+        <section id="about">
+          <About />
+        </section>
 
+        <section id="experience" className="min-h-screen">
+          <Experience />
+        </section>
+
+        <section id="skills" className="min-h-screen">
+          <Skills />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
     </div>
   );
 }

@@ -39,3 +39,16 @@
     transform: rotate(360deg);
   }
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px; /* Height of your navbar */
+}
+
+/* Optional: Add scroll snapping for better section alignment */
+.App main {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}

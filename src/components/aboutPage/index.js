@@ -2,7 +2,7 @@ import headshot from "../assets/headshot.jpg";
 
 const About = () => {
     return (
-        <div className="flex flex-col bg-inherit min-h-screen pt-24" id="About">
+        <div className="flex flex-col bg-inherit pb-12 pt-24" id="About">
             <h2 className="text-4xl font-bold mb-6 dark:text-white text-center">About Me</h2>
             <div className="flex flex-row gap-8 px-6 max-w-6xl mx-auto items-center"> {/* Added items-center */}
                 {/* Left column - Image */}
