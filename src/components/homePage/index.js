@@ -1,21 +1,23 @@
-import headshot from "../assets/headshot.jpg"
-const Home = ()=>{
+
+
+const Home = () => {
     return (
-        <div class=" flex bg-inherit  h-screen" id="intro">
-            <div class=" flex items-center justify-center w-1/2" >
-                <div>
-                <h1 class="mb-4 text-lg font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white ">I am Brady Friese, based out of Japan.</h1>
-
-                <p class="mb-4  dark:text-white">I am currently working as an Assistant Language Teacher at Hamada Commercial Business High School</p>
-
+        <div className="flex flex-col bg-inherit min-h-screen">
+            <section 
+                id="Home" 
+                className="flex flex-col h-[calc(100vh-64px)] justify-center items-center px-6 text-center mt-16"
+            >
+                <div className="w-full max-w-4xl">
+                    <h1 className="mb-4 text-lg font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white ">
+                        I am Brady Friese, based out of Japan.
+                    </h1>
+                    <p className="mb-4 dark:text-white">
+                        I am a software engineer specializing in full 
+                    </p>
                 </div>
-            </div>
-
-            <div class="flex items-center justify-center w-1/2">
-                <img className="rounded-full" src={headshot} alt="Headshot of Brady Friese"/>
-            </div>
+            </section>
         </div>
-    )
+    );
 };
 
-export default Home
+export default Home;
