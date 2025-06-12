@@ -6,7 +6,6 @@ import About from './components/aboutPage';
 import Skills from './components/skillsPage';
 import Experience from './components/experiencePage';
 import Contact from './components/contactPage';
-import Footer from './components/footer';
 
 function App() {
   return (
