@@ -39,7 +39,7 @@ const About = () => {
                     <img
                         src={headshot}
                         alt="Brady Friese"
-                        className="rounded-full border-4 border-gray-300 dark:border-gray-600 w-full h-auto"
+                        className="rounded-3xl border-4 border-gray-300 dark:border-gray-600 w-full h-1/3"
                     />
                 </div>
 

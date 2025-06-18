@@ -36,7 +36,7 @@ const Skills = () => {
                 <h2 className="text-4xl font-bold mb-6 dark:text-white text-center">Skill Competencies</h2>
                 
                 {Object.entries(skillCategories).map(([category, skills]) => (
-                    <div key={category} className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                    <div key={category} className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold mb-4 dark:text-white">{category}</h3>
                         {skills.map((skill) => (
                             <SkillBar 

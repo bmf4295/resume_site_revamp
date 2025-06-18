@@ -1,5 +1,4 @@
 import backgroundImage from '../assets/background.jpg';
-//TODO: Add CSS Animations in application to make it more visually appealing. Try using Animate.css or Tailwind CSS animations.
 //TODO: Finish adding content to the All pages. 
 const Home = () => {
     return (
