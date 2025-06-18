@@ -25,7 +25,7 @@ const Home = () => {
                         I am Brady Friese.
                     </h1>
                     <p className="mb-4 text-white">
-                        I am a software engineer specializing in full stack development.
+                        I am a flexible software engineer specializing in full stack development.
                     </p>
                 </div>
             </div>

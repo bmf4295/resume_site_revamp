@@ -5,25 +5,27 @@ const Skills = () => {
         "Programming Languages": [
             { name: "HTML/CSS", level: 95 },
             { name: "JavaScript", level: 90 },
+            { name: "TypeScript", level: 90 },
             { name: "Java", level:85 },
             { name: "SQL", level:85 },
             { name: "Python", level: 80 },
             { name: "C++", level: 80 },
             { name: "C#", level: 75 },
         ],
-        "Databases": [
-            { name: "MongoDB", level: 90 },
-            { name: "PostgresSQL", level: 85 },
-            { name: "Oracle Database", level: 80 },
-            { name: "Google Firebase", level: 75 },
-        ],
         "Frameworks & Libraries": [
-            { name: "React", level: 90 },
-            { name: "Node.js", level: 90 },
-            { name: "TailwindCSS", level: 85 },
-            { name: "Express", level: 80 },
-
-        ]
+            { name: "React", level: 95 },
+            { name: "Node.js", level: 95 },
+            { name: "Express.js", level: 85 },
+            { name: "TailwindCSS", level: 80 },
+            { name: "Robot Framework", level: 75 },
+            { name: "Spring Framework", level: 70 },
+        ],
+        "Tools & Platforms": [
+            { name: "MongoDB", level: 95 },
+            { name: "PostgresSQL", level: 90 },
+            { name: "Oracle Database", level: 85 },
+            { name: "Google Firebase", level: 80 },
+        ],
     };
 
     return (

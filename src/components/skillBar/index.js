@@ -2,29 +2,27 @@ import { useEffect, useRef } from 'react';
 
 const SkillBar = ({ name, level }) => {
     const barRef = useRef(null);
+    const hasAnimated = useRef(false);
 
     useEffect(() => {
         const bar = barRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
+                    if (entry.isIntersecting && !hasAnimated.current) {
                         requestAnimationFrame(() => {
                             bar.style.setProperty('--target-width', `${level}%`);
                             bar.classList.remove('w-0');
                             bar.classList.add('fill-animation');
-                        });
-                    } else {
-                        requestAnimationFrame(() => {
-                            bar.classList.remove('fill-animation');
-                            bar.classList.add('w-0');
+                            hasAnimated.current = true;
+                            observer.unobserve(bar);
                         });
                     }
                 });
             },
             { 
-                threshold: [0.1, 0.2], // Multiple thresholds for better mobile detection
-                rootMargin: '-20px 0px', // Reduced margin for mobile
+                threshold: [0.2, 0.3],
+                rootMargin: '-20px 0px',
             }
         );
 
@@ -46,7 +44,7 @@ const SkillBar = ({ name, level }) => {
             <div className="w-full bg-gray-200 rounded-lg h-10 dark:bg-gray-700 overflow-hidden">
                 <div 
                     ref={barRef}
-                    className="bg-blue-600 h-10 rounded-lg w-0 flex items-center px-4 transition-all duration-1000"
+                    className="bg-blue-600 h-10 rounded-lg w-0 flex items-center px-4"
                 >
                     <span className="text-white font-medium truncate">{name}</span>
                 </div>

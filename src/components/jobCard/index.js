@@ -1,6 +1,36 @@
+import { useEffect, useRef } from 'react';
+
 const JobCard = ({ title, period, company, responsibilities }) => {
+    const cardRef = useRef(null);
+
+    useEffect(() => {
+        const card = cardRef.current;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        card.classList.remove('invisible');
+                        card.classList.add('slide-in-left');
+                        observer.unobserve(card);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (card) {
+            observer.observe(card);
+        }
+
+        return () => {
+            if (card) {
+                observer.unobserve(card);
+            }
+        };
+    }, []);
+
     return (
-        <div className="mb-8 relative">
+        <div ref={cardRef} className="mb-8 relative invisible">
             <div className="absolute left-8 transform -translate-x-1/2 w-8 h-8 bg-white dark:bg-gray-800 rounded-full border-2 border-blue-500 flex items-center justify-center">
                 <i className="fas fa-briefcase text-blue-500"></i>
             </div>
