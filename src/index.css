@@ -71,3 +71,22 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--target-width);
+    }
+}
+
+.fill-animation {
+    animation: fillBar 1s ease-out forwards;
+    will-change: width;
+}
+
+.w-0 {
+    width: 0%;
+    transition: width 0.3s ease-out;
+}

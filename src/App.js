@@ -1,5 +1,4 @@
 import './App-tailwid.css';
-import React from 'react';
 import NavBar from './components/navBar';
 import Home from './components/homePage';
 import About from './components/aboutPage';

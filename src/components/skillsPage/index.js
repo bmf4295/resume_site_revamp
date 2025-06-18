@@ -2,17 +2,27 @@ import SkillBar from '../skillBar';
 
 const Skills = () => {
     const skillCategories = {
-        "Languages": [
-            { name: "JavaScript", level: 90 },
-            { name: "Python", level: 85 },
-            { name: "Java", level: 75 },
+        "Programming Languages": [
             { name: "HTML/CSS", level: 95 },
+            { name: "JavaScript", level: 90 },
+            { name: "Java", level:85 },
+            { name: "SQL", level:85 },
+            { name: "Python", level: 80 },
+            { name: "C++", level: 80 },
+            { name: "C#", level: 75 },
+        ],
+        "Databases": [
+            { name: "MongoDB", level: 90 },
+            { name: "PostgresSQL", level: 85 },
+            { name: "Oracle Database", level: 80 },
+            { name: "Google Firebase", level: 75 },
         ],
         "Frameworks & Libraries": [
             { name: "React", level: 90 },
-            { name: "Node.js", level: 85 },
-            { name: "Express", level: 80 },
+            { name: "Node.js", level: 90 },
             { name: "TailwindCSS", level: 85 },
+            { name: "Express", level: 80 },
+
         ]
     };
 
