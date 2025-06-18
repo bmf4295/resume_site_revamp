@@ -8,8 +8,8 @@ const Skills = () => {
             { name: "TypeScript", level: 90 },
             { name: "Java", level:85 },
             { name: "SQL", level:85 },
+            { name: "C++", level: 85 },
             { name: "Python", level: 80 },
-            { name: "C++", level: 80 },
             { name: "C#", level: 75 },
         ],
         "Frameworks & Libraries": [
@@ -24,7 +24,7 @@ const Skills = () => {
             { name: "MongoDB", level: 95 },
             { name: "PostgresSQL", level: 90 },
             { name: "Oracle Database", level: 85 },
-            { name: "Google Firebase", level: 80 },
+            { name: "Google Firebase", level: 70 },
         ],
     };
 
