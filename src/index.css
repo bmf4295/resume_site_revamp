@@ -122,6 +122,20 @@ html, body {
     animation: slideInLeft 0.8s ease-out forwards;
 }
 
+@keyframes slideInDot {
+    from {
+        opacity: 0;
+        transform: translate(-100px, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+.slide-in-dot {
+    animation: slideInDot 0.65s ease-out forwards;
+}
+
 .invisible {
   opacity: 0;
 }
