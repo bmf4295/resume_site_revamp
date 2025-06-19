@@ -33,18 +33,18 @@ const About = () => {
     return (
         <div ref={sectionRef} className="invisible flex flex-col bg-inherit pb-12 pt-24" id="About">
             <h2 className="text-4xl font-bold mb-6 dark:text-white text-center">About Me</h2>
-            <div className="flex flex-row gap-8 px-6 max-w-6xl mx-auto items-center"> {/* Added items-center */}
+            <div className="flex flex-col md:flex-row gap-8 px-6 max-w-6xl mx-auto items-center"> {/* Added items-center */}
                 {/* Left column - Image */}
                 <div className="w-1/3 flex items-center"> {/* Added flex and items-center */}
                     <img
                         src={headshot}
                         alt="Brady Friese"
-                        className="rounded-3xl border-4 border-gray-300 dark:border-gray-600 w-full h-1/3"
+                        className="rounded-3xl border-4 border-gray-300 dark:border-gray-600 w-full h-1/2 md:h-1/3"
                     />
                 </div>
 
                 {/* Right column - Text content */}
-                <div className="w-2/3 space-y-4 self-center"> {/* Added self-center */}
+                <div className=" md:w-2/3 space-y-4 self-center"> {/* Added self-center */}
                     <p className="dark:text-white text-left">
                         I'm a full-stack software developer with over 3 years of experience building enterprise web applications with React, Node.js, and SQL.
                     </p>
