@@ -32,7 +32,7 @@ const About = () => {
     }, []);
     return (
         <div ref={sectionRef} className="invisible flex flex-col bg-inherit pb-12 pt-24" id="About">
-            <h2 className="text-4xl font-bold mb-6 dark:text-white text-center">About Me</h2>
+            <h2 data-testid="aboutMe" className="text-4xl font-bold mb-6 dark:text-white text-center">About Me</h2>
             <div className="flex flex-col md:flex-row gap-8 px-6 max-w-6xl mx-auto items-center"> {/* Added items-center */}
                 {/* Left column - Image */}
                 <div className="w-1/3 flex items-center"> {/* Added flex and items-center */}

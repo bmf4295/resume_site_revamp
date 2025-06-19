@@ -67,7 +67,7 @@ const Experience = () => {
     }, []);
 
     return (
-        <div  className="flex flex-col bg-inherit min-h-screen pt-12 px-6" id="Experience">
+        <div data-testid="workExperience" className="flex flex-col bg-inherit min-h-screen pt-12 px-6" id="Experience">
             <h2 className="text-4xl font-bold mb-12 dark:text-white text-center">Work Experience</h2>
             
             {/* Timeline container */}

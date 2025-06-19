@@ -2,7 +2,7 @@ import backgroundImage from '../assets/background.jpg';
 //TODO: Finish adding content to the All pages. 
 const Home = () => {
     return (
-        <div className="relative h-[100vh] w-full overflow-hidden">
+        <div data-testid="home" className="relative h-[100vh] w-full overflow-hidden">
             {/* Background Image */}
             <div 
                 className="absolute inset-0 z-0"

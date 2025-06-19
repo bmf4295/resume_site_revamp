@@ -31,7 +31,7 @@ const Skills = () => {
     };
 
     return (
-        <div className="flex flex-col bg-inherit min-h-screen pt-16" id="Skills">
+        <div data-testid="skills" className="flex flex-col bg-inherit min-h-screen pt-16" id="Skills">
             <div className="max-w-4xl mx-auto w-full flex flex-col gap-6">
                 <h2 className="text-4xl font-bold mb-6 dark:text-white text-center">Skill Competencies</h2>
                 

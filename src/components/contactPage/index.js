@@ -6,7 +6,7 @@ const Contact = () => {
     };
 
     return (
-        <div  className="flex flex-col pt-8" id="Contact">
+        <div data-testid="contact" className="flex flex-col pt-8" id="Contact">
             <div className="flex-grow px-6">
                 <h2 className="text-4xl font-bold mb-12 dark:text-white text-center">Contact Me</h2>
                 
