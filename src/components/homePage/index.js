@@ -17,14 +17,14 @@ const Home = () => {
             {/* Content with semi-transparent overlay */}
             <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50">
                 <div className="w-full max-w-4xl px-6">
-                    <h1 className="mb-4 text-lg font-bold text-white md:text-5xl lg:text-6xl">
+                    <h1 className="mb-4 text-2xl font-bold text-white md:text-5xl lg:text-6xl">
                      Welcome!
                     </h1>
-                    <h1 className="mb-4 text-lg font-bold text-white md:text-5xl lg:text-6xl">
+                    <h1 className="mb-4 text-2xl font-bold text-white md:text-5xl lg:text-6xl">
                         I am Brady Friese.
                     </h1>
-                    <p className="mb-4 text-white">
-                        I am a flexible software engineer specializing in full stack development.
+                    <p className="mb-4 text-lg text-white md:text-xl">
+                        I build reliable, user-focused applications from front to back.
                     </p>
                 </div>
             </div>

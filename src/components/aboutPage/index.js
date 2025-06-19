@@ -45,14 +45,14 @@ const About = () => {
 
                 {/* Right column - Text content */}
                 <div className=" md:w-2/3 space-y-4 self-center"> {/* Added self-center */}
-                    <p className="dark:text-white text-left">
-                        I'm a full-stack software developer with over 3 years of experience building enterprise web applications with React, Node.js, and SQL.
+                    <p className="text-left text-base md:text-lg lg:text-xl dark:text-white">
+                       I'm a full-stack software developer with 3 years of experience building enterprise applications using Java, JavaScript/TypeScript, React.js, Node.js, and SQL.
                     </p>
-                    <p className="dark:text-white text-left">
-                        I have led frontend development for high-traffic features on the Paychex Flex platform and enjoy working across the stack to ship intuitive, scalable products.
+                    <p className="text-left text-base md:text-lg lg:text-xl dark:text-white">
+                       I've led frontend efforts on large-scale platforms and enjoy working across the stack to deliver intuitive, scalable solutions.
                     </p>
-                    <p className="dark:text-white text-left">
-                        I'm currently looking to for new opportunities. I am interested in joining a mission-driven team where I can help solve real-world problems with clean, reliable code.
+                    <p className="text-left text-base md:text-lg lg:text-xl dark:text-white">
+                       After gaining valuable professional experience in Japan, I'm now seeking new opportunities on a mission-driven team where I can help solve real-world problems with clean, reliable code.
                     </p>
                 </div>
             </div>
