@@ -38,7 +38,7 @@ const SkillBar = ({ name, level }) => {
     }, [level]);
 
     return (
-        <div className="mb-6 w-full">
+        <div data-testid="skillBar" className="mb-6 w-full">
             <div className="flex justify-between items-center mb-1">
             </div>
             <div className="w-full bg-gray-200 rounded-lg h-10 dark:bg-gray-700 overflow-hidden">

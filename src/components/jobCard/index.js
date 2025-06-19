@@ -34,7 +34,7 @@ const JobCard = ({ title, period, company, responsibilities }) => {
     }, []);
 
     return (
-        <div className="mb-8 relative">
+        <div data-testid="jobCard" className="mb-8 relative">
             <div 
                 ref={dotRef} 
                 className="absolute left-8 top-0 -translate-x-1/2 w-8 h-8 bg-white dark:bg-gray-800 rounded-full border-2 border-blue-500 flex items-center justify-center invisible"
