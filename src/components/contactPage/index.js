@@ -8,11 +8,11 @@ const Contact = () => {
     return (
         <div data-testid="contact" className="flex flex-col pt-8" id="Contact">
             <div className="flex-grow px-6">
-                <h2 className="text-4xl font-bold mb-12 dark:text-white text-center">Contact Me</h2>
+                <h2 className="text-4xl font-bold mb-12 text-white text-center">Contact Me</h2>
                 
                 <div className="max-w-2xl mx-auto w-full">
                     {/*Contact Invitation*/}
-                    <p className="text-center text-lg dark:text-white mb-12">
+                    <p className="text-center text-lg text-white mb-12">
                         I'm open to new opportunities and collaborations. Whether you have a project in mind, 
                         want to discuss potential opportunities, or just want to connect, feel free to reach out 
                         through any of the methods below. I will get back to you as soon as possible!

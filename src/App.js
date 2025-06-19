@@ -8,7 +8,7 @@ import Contact from './components/contactPage';
 
 function App() {
   return (
-    <div className="App dark:bg-slate-800 h-screen flex flex-col overflow-hidden">
+    <div className="App bg-slate-800 h-screen flex flex-col overflow-hidden">
       <NavBar />
       <div className="flex-grow overflow-y-auto">
         <section id="home" className="h-screen relative">
