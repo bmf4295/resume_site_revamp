@@ -7,6 +7,9 @@ const Footer = () => {
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                     © {currentYear} Brady Friese. All rights reserved.
                 </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Check out the code for this site <a rel="noreferrer" target="_blank" href="https://github.com/bmf4295/resume_site_revamp" className="text-blue-600 hover:underline dark:text-blue-400">here</a>
+                </p>
             </div>
         </footer>
     );
