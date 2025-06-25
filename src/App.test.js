@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
 describe('App Component', () => {
@@ -63,4 +63,30 @@ describe('App Component', () => {
     const skillBar = screen.getAllByTestId('skillBar');
     expect(skillBar[0]).toBeInTheDocument();
   });
+
+   test('renders project section', () => {
+    render(<App />);
+    const projects = screen.getByTestId('Projects');
+    expect(projects).toBeInTheDocument();
+  });
+
+   test('renders project card', () => {
+    render(<App />);
+    const projects = screen.getAllByTestId('ProjectCard');
+    expect(projects[0]).toBeInTheDocument();
+  });
+
+  test('renders project modal and carousel on click of card', async () => {
+    render(<App />);
+    const projects = screen.getAllByTestId('ProjectCard');
+    expect(projects[0]).toBeInTheDocument();
+    fireEvent.click(projects[0]);
+
+    const projectModal = await screen.getByTestId('ProjectModal');
+    expect(projectModal).toBeInTheDocument();
+    const carousel = await screen.getAllByTestId('Carousel');
+    expect(carousel[0]).toBeInTheDocument();
+
+  });
+  
 });

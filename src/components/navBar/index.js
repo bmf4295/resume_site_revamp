@@ -32,9 +32,8 @@ const NavBar = () => {
             onClick={toggleMenu}
           >
             <i
-              className={`fas ${
-                isMenuOpen ? "fa-times" : "fa-bars"
-              } text-xl`}
+              className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"
+                } text-xl`}
             ></i>
           </button>
 
@@ -62,6 +61,13 @@ const NavBar = () => {
               Work Experience
             </a>
             <a
+              href="#projects"
+              onClick={(e) => handleScroll(e, "projects")}
+              className="nav-link text-sm"
+            >
+              Featured Projects
+            </a>
+            <a
               href="#skills"
               onClick={(e) => handleScroll(e, "skills")}
               className="nav-link text-sm"
@@ -87,12 +93,11 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
-      <div 
-        className={`${
-          isMenuOpen ? 'flex' : 'hidden'
-        } sm:hidden flex-col space-y-4 py-4 px-2 bg-gray-900 rounded-b-lg`}
+      <div
+        className={`${isMenuOpen ? 'flex' : 'hidden'
+          } sm:hidden flex-col space-y-4 py-4 px-2 bg-gray-900 rounded-b-lg`}
       >
         <a
           href="#home"
@@ -114,6 +119,13 @@ const NavBar = () => {
           className="nav-link text-sm"
         >
           Work Experience
+        </a>
+        <a
+          href="#projects"
+          onClick={(e) => handleScroll(e, "projects")}
+          className="nav-link text-sm"
+        >
+          Featured Projects
         </a>
         <a
           href="#skills"

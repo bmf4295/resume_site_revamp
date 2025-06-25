@@ -4,6 +4,7 @@ import Home from './components/homePage';
 import About from './components/aboutPage';
 import Skills from './components/skillsPage';
 import Experience from './components/experiencePage';
+import FeaturedProjects from './components/featuredProjects';
 import Contact from './components/contactPage';
 
 function App() {
@@ -19,11 +20,15 @@ function App() {
           <About />
         </section>
 
-        <section id="experience" className="min-h-screen">
+        <section id="experience" >
           <Experience />
         </section>
 
-        <section id="skills" className="min-h-screen">
+        <section id="projects" >
+          <FeaturedProjects />
+          </section>
+
+        <section id="skills">
           <Skills />
         </section>
 
