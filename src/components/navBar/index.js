@@ -41,42 +41,42 @@ const NavBar = () => {
           <div className="hidden sm:grid grid-flow-col gap-6">
             <a
               href="#home"
-              onClick={(e) => handleScroll(e, "home")}
+              onClick={(e) => handleScroll(e, "Home")}
               className="nav-link text-sm"
             >
               Home
             </a>
             <a
               href="#about"
-              onClick={(e) => handleScroll(e, "about")}
+              onClick={(e) => handleScroll(e, "About")}
               className="nav-link text-sm"
             >
               About me
             </a>
             <a
               href="#experience"
-              onClick={(e) => handleScroll(e, "experience")}
+              onClick={(e) => handleScroll(e, "Experience")}
               className="nav-link text-sm"
             >
               Work Experience
             </a>
             <a
               href="#projects"
-              onClick={(e) => handleScroll(e, "projects")}
+              onClick={(e) => handleScroll(e, "Projects")}
               className="nav-link text-sm"
             >
               Featured Projects
             </a>
             <a
               href="#skills"
-              onClick={(e) => handleScroll(e, "skills")}
+              onClick={(e) => handleScroll(e, "Skills")}
               className="nav-link text-sm"
             >
               Skills
             </a>
             <a
               href="#contact"
-              onClick={(e) => handleScroll(e, "contact")}
+              onClick={(e) => handleScroll(e, "Contact")}
               className="nav-link text-sm"
             >
               Contact Me
