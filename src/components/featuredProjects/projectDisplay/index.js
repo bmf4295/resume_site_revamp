@@ -5,7 +5,6 @@ const ProjectDisplay = ({ project }) => {
 
     return (
         <div
-            // Removed max-h-[90vh], overflow-y-auto, and overflow-hidden
             className="bg-gray-800 rounded-lg shadow-xl w-full flex flex-col md:flex-row"
         >
             {/* Left Side: Carousel */}

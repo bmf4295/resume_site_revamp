@@ -1,6 +1,6 @@
 import JobCard from '../jobCard';
 import Section from '../section';
-import { useEffect, useRef } from 'react';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Experience = () => {
     const jobs = [
@@ -41,41 +41,14 @@ const Experience = () => {
         }
     ];
 
-    const sectionRef = useRef(null);
-
-    useEffect(() => {
-        const section = sectionRef.current;
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        section.classList.remove('invisible');
-                        section.classList.add('slide-in-left');
-                        observer.unobserve(section);
-                    }
-                });
-            },
-            { threshold: 0.01 }
-        );
-
-        if (section) {
-            observer.observe(section);
-        }
-
-        return () => {
-            if (section) {
-                observer.unobserve(section);
-            }
-        };
-    }, []);
+    const sectionRef = useFadeInOnScroll({ threshold: 0.01 }, 'slide-in-left');
 
     return (
         <Section ref={sectionRef} className="invisible" data-testid="workExperience" id="Experience" title="Work Experience">
             {/* Timeline container */}
-            <div className="relative"> {/* Removed max-w-4xl and mx-auto */}
+            <div className="relative"> 
                 {/* Vertical line */}
-                <div className="absolute left-8 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div> {/* Removed ref and invisible */}
-
+                <div className="absolute left-8 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div> 
                 {/* Job cards */}
                 {jobs.map((job, index) => (
                     <JobCard key={index} {...job} />

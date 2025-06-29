@@ -40,42 +40,42 @@ const NavBar = () => {
           {/* Desktop menu */}
           <div className="hidden sm:grid grid-flow-col gap-6">
             <a
-              href="#home"
+              href="#Home"
               onClick={(e) => handleScroll(e, "Home")}
               className="nav-link text-sm"
             >
               Home
             </a>
             <a
-              href="#about"
+              href="#About"
               onClick={(e) => handleScroll(e, "About")}
               className="nav-link text-sm"
             >
               About me
             </a>
             <a
-              href="#experience"
+              href="#Experience"
               onClick={(e) => handleScroll(e, "Experience")}
               className="nav-link text-sm"
             >
               Work Experience
             </a>
             <a
-              href="#projects"
+              href="#Projects"
               onClick={(e) => handleScroll(e, "Projects")}
               className="nav-link text-sm"
             >
               Featured Projects
             </a>
             <a
-              href="#skills"
+              href="#Skills"
               onClick={(e) => handleScroll(e, "Skills")}
               className="nav-link text-sm"
             >
               Skills
             </a>
             <a
-              href="#contact"
+              href="#Contact"
               onClick={(e) => handleScroll(e, "Contact")}
               className="nav-link text-sm"
             >
@@ -91,43 +91,43 @@ const NavBar = () => {
           } sm:hidden flex-col space-y-4 py-4 px-2 bg-gray-900 rounded-b-lg`}
       >
         <a
-          href="#home"
-          onClick={(e) => handleScroll(e, "home")}
+          href="#Home"
+          onClick={(e) => handleScroll(e, "Home")}
           className="nav-link text-sm"
         >
           Home
         </a>
         <a
-          href="#about"
-          onClick={(e) => handleScroll(e, "about")}
+          href="#About"
+          onClick={(e) => handleScroll(e, "About")}
           className="nav-link text-sm"
         >
           About me
         </a>
         <a
-          href="#experience"
-          onClick={(e) => handleScroll(e, "experience")}
+          href="#Experience"
+          onClick={(e) => handleScroll(e, "Experience")}
           className="nav-link text-sm"
         >
           Work Experience
         </a>
         <a
-          href="#projects"
-          onClick={(e) => handleScroll(e, "projects")}
+          href="#Projects"
+          onClick={(e) => handleScroll(e, "Projects")}
           className="nav-link text-sm"
         >
           Featured Projects
         </a>
         <a
-          href="#skills"
-          onClick={(e) => handleScroll(e, "skills")}
+          href="#Skills"
+          onClick={(e) => handleScroll(e, "Skills")}
           className="nav-link text-sm"
         >
           Skills
         </a>
         <a
-          href="#contact"
-          onClick={(e) => handleScroll(e, "contact")}
+          href="#Contact"
+          onClick={(e) => handleScroll(e, "Contact")}
           className="nav-link text-sm"
         >
           Contact Me

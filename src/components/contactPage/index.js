@@ -2,7 +2,6 @@ import Section from '../section';
 
 const Contact = () => {
     const handleEmailClick = () => {
-        // Remember to replace this with your actual email address
         window.location.href = "mailto:me@bradyfriese.com";
     };
 

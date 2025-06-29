@@ -1,6 +1,6 @@
 import SkillDisplay from '../skillDisplay';
 import Section from '../section';
-import {  useRef, useEffect } from "react";
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Skills = () => {
     // Skill categories and their respective years of professional+personal experience
@@ -39,33 +39,7 @@ const Skills = () => {
     };
 
 
-    const sectionRef = useRef(null);
-    
-      useEffect(() => {
-              const section = sectionRef.current;
-              const observer = new IntersectionObserver(
-                  (entries) => {
-                      entries.forEach((entry) => {
-                          if (entry.isIntersecting) {
-                              section.classList.remove('invisible');
-                              section.classList.add('fade-in');
-                              observer.unobserve(section);
-                          }
-                      });
-                  },
-                  { threshold: 0.35 }
-              );
-      
-              if (section) {
-                  observer.observe(section);
-              }
-      
-              return () => {
-                  if (section) {
-                      observer.unobserve(section);
-                  }
-              };
-          }, []);
+    const sectionRef = useFadeInOnScroll();
 
     return (
         <Section ref={sectionRef} className="invisible" data-testid="Skills" id="Skills" title="Technical Skills">

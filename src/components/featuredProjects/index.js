@@ -3,7 +3,7 @@ import Anirec1 from "../assets/Anirec/Anirec_Screenshot_1.png";
 import Anirec2 from "../assets/Anirec/Anirec_Screenshot_2.png";
 import Anirec3 from "../assets/Anirec/Anirec_Screenshot_3.png";
 
-import {  useRef, useEffect } from "react";
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 import ProjectDisplay from "./projectDisplay";
 
 const featuredProjectsData = [
@@ -25,34 +25,8 @@ const featuredProjectsData = [
 
 //running into a crazy bug on mobile where the modal content is a little blurry. Unfixable for now, but it works fine on desktop. Will revisit later.
 const FeaturedProjects = ()=>{
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-          const section = sectionRef.current;
-          const observer = new IntersectionObserver(
-              (entries) => {
-                  entries.forEach((entry) => {
-                      if (entry.isIntersecting) {
-                          section.classList.remove('invisible');
-                          section.classList.add('fade-in');
-                          observer.unobserve(section);
-                      }
-                  });
-              },
-              { threshold: 0.35 }
-          );
   
-          if (section) {
-              observer.observe(section);
-          }
-  
-          return () => {
-              if (section) {
-                  observer.unobserve(section);
-              }
-          };
-      }, []);
-
+    const sectionRef = useFadeInOnScroll();
 
     return (
         <Section ref={sectionRef} className= "invisible" data-testid="Projects" id="Projects" title="Featured Projects">
