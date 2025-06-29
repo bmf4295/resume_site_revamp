@@ -2,7 +2,7 @@ import SkillDisplay from '../skillDisplay';
 import {  useRef, useEffect } from "react";
 
 const Skills = () => {
-    // Skill categories and their respective years of professional experience
+    // Skill categories and their respective years of professional+personal experience
     const skillCategories = {
         "Programming Languages": [
             { name: "HTML/CSS", years: 5 },
@@ -30,6 +30,7 @@ const Skills = () => {
             { name: "Spring Boot", years: 2 },
             { name: "Docker/Podman", years: 2 },
             { name: "Google Firebase", years: 1 },
+            { name: "Vite", years: 1 },
             { name: "Github Copilot", years: 1 },
             { name: "Large Language Models", years: 1 },
         ],

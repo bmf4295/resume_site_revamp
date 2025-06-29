@@ -6,7 +6,7 @@ const ProjectDisplay = ({ project }) => {
     return (
         <div
             data-testid="ProjectDisplay"
-            className="bg-gray-800 rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row overflow-hidden"
+            className="bg-gray-900 rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row overflow-hidden"
         >
             {/* Left Side: Carousel */}
             <div className="w-full md:w-1/2 p-6 flex justify-center items-center">

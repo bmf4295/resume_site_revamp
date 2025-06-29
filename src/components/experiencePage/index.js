@@ -8,23 +8,25 @@ const Experience = () => {
             period: "June 2021 - August 2023",
             company: "Mindex",
             responsibilities: [
-                "Orchestrated maintenance and enhancement of 10+ mission-critical legacy applications and microservices for Paychex Inc., utilizing Java, JavaScript, and Python to ensure optimal performance.",
-                "Architected and implemented new Java microservices and RESTful APIs within a 5-person development team, achieving a 50% reduction in latency for database procedures and front-end systems.",
-                "Spearheaded development of 4 complex React.JS web interfaces for Paychex Flex platform, successfully integrating Oracle database connectivity and optimizing data visualization.",
-                "Established department-wide automated testing protocols using Python and Robot Framework, training team members and implementing best practices that improved testing efficiency and code quality by 30%.",
-                "Collaborated cross-functionally with stakeholders using Jira and Confluence to refine the product backlog, define clear acceptance criteria, gather technical requirements, and document features in order to support efficient and predictable biweekly sprint execution."
-            ]
+                "Orchestrated maintenance and enhancement of 10+ mission-critical applications and microservices for Paychex Inc., utilizing <b>Java</b>, <b>JavaScript</b>, and <b>Python</b> to ensure optimal performance.",
+                "Architected and implemented new <b>Java microservices</b> and <b>RESTful APIs </b> within a 5-person development team, achieving a 50% reduction in latency.",
+                "Championed development of <b>4 complex React web interfaces</b> for Paychex Flex platform, successfully integrating Oracle database connectivity and optimizing data visualizations.",
+                "Established department-wide automated testing protocols using <b>Python</b> and <b>Robot Framework</b>, training team members and implementing best practices.",
+                "Collaborated cross-functionally with stakeholders using <b>Jira</b> and <b>Confluence</b> to refine the product backlog, define clear acceptance criteria, gather technical requirements, and document features."
+            ],
+            technicalStack:["Java", "JavaScript", "TypeScript", "Node.js", "React", "Python",  "Oracle Database", "PL/SQL", "MongoDB", "Spring Boot", "Robot Framework"]
         },
         {
             title: "Software Development Intern",
             period: "January 2020 - August 2020",
             company: "Fujifilm North America Corporation",
             responsibilities: [
-                "Contributed to development of enterprise-scale cloud photo printing kiosk system using JavaScript, TypeScript, and Vue.JS, designed for deployment across 1000+ North American retail locations.",
+                "Contributed to development of enterprise-scale cloud photo printing kiosk system using <b>JavaScript</b>, <b>TypeScript</b>, and <b>Vue.JS</b>, designed for deployment across 1000+ North American retail locations.",
                 "Enhanced system stability and performance through optimization initiatives, resulting in 50% reduction in crash frequency and 20% improvement in menu navigation speed.",
-                "Engineered MongoDB-based order management system, implementing efficient data handling and automated cleanup processes to optimize system resources.",
-                "Identified and resolved bugs across the full kiosk stack, including UI, backend, and database, improving system stability and user experience ahead of the beta launch."
-            ]
+                "Engineered <b>MongoDB</b>-based order management system, implementing efficient data handling and automated cleanup processes to optimize system resources.",
+                "Identified and resolved bugs across the full kiosk stack, improving system stability and user experience ahead of successful beta launch."
+            ],
+            technicalStack:["JavaScript", "TypeScript", "Node.js", "Vue.js", "Express.js", "MongoDB"]
         },
         {
             title: "Assistant Language Teacher",

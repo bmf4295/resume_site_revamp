@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const JobCard = ({ title, period, company, responsibilities }) => {
+const JobCard = ({ title, period, company, responsibilities, technicalStack = [] }) => {
     const cardRef = useRef(null);
     const dotRef = useRef(null);
 
@@ -50,11 +50,24 @@ const JobCard = ({ title, period, company, responsibilities }) => {
                     <p className="text-gray-300 mb-5">{company}</p>
                     <ul className="list-disc space-y-2 ml-4">
                         {responsibilities.map((responsibility, index) => (
-                            <li key={index} className="text-white">
-                                {responsibility}
-                            </li>
+                            <li
+                                key={index}
+                                className="text-white"
+                                dangerouslySetInnerHTML={{ __html: responsibility }}
+                            />
                         ))}
                     </ul>
+                    {/* Technical Stack Section */}
+                    {technicalStack && technicalStack.length > 0 && (
+                        <div className="mt-4">
+                            <p className="font-semibold text-gray-300 mb-2">Technical Stack:</p>
+                            <div className="flex flex-wrap gap-2">
+                                {technicalStack.map((tech, index) => (
+                                    <span key={index} className="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">{tech}</span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
