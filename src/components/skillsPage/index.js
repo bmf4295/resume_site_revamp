@@ -1,4 +1,5 @@
 import SkillDisplay from '../skillDisplay';
+import Section from '../section';
 import {  useRef, useEffect } from "react";
 
 const Skills = () => {
@@ -6,7 +7,8 @@ const Skills = () => {
     const skillCategories = {
         "Programming Languages": [
             { name: "HTML/CSS", years: 5 },
-            { name: "JavaScript/TypeScript", years: 4 },
+            { name: "JavaScript", years: 4 },
+             { name: "TypeScript", years: 4 },
             { name: "Java", years: 2 },
             { name: "SQL", years: 2 },
             { name: "Python", years: 2 },
@@ -66,24 +68,24 @@ const Skills = () => {
           }, []);
 
     return (
-        <div ref={sectionRef} data-testid="skills" className="flex flex-col bg-inherit min-h-screen pt-16" id="Skills">
-            <div className="max-w-4xl mx-auto w-full flex flex-col gap-6">
-                <h2 className="text-4xl font-bold mb-6 text-white text-center">Technical Skills</h2>
-
+        <Section ref={sectionRef} className="invisible" data-testid="Skills" id="Skills" title="Technical Skills">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {Object.entries(skillCategories).map(([category, skills]) => (
                     <div key={category} className="p-4 bg-gray-900 rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold mb-4 text-white">{category}</h3>
-                        {skills.map((skill) => (
-                            <SkillDisplay
-                                key={skill.name}
-                                name={skill.name}
-                                years={skill.years}
-                            />
-                        ))}
+                        <div className="space-y-2">
+                            {skills.map((skill) => (
+                                <SkillDisplay
+                                    key={skill.name}
+                                    name={skill.name}
+                                    years={skill.years}
+                                />
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
-        </div>
+        </Section>
     );
 };
 

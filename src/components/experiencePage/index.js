@@ -1,4 +1,5 @@
 import JobCard from '../jobCard';
+import Section from '../section';
 import { useEffect, useRef } from 'react';
 
 const Experience = () => {
@@ -14,7 +15,7 @@ const Experience = () => {
                 "Established department-wide automated testing protocols using <b>Python</b> and <b>Robot Framework</b>, training team members and implementing best practices.",
                 "Collaborated cross-functionally with stakeholders using <b>Jira</b> and <b>Confluence</b> to refine the product backlog, define clear acceptance criteria, gather technical requirements, and document features."
             ],
-            technicalStack:["Java", "JavaScript", "TypeScript", "Node.js", "React", "Python",  "Oracle Database", "PL/SQL", "MongoDB", "Spring Boot", "Robot Framework"]
+            technicalStack: ["Java", "JavaScript", "TypeScript", "Node.js", "React", "Python", "Oracle Database", "PL/SQL", "MongoDB", "Spring Boot", "Robot Framework"]
         },
         {
             title: "Software Development Intern",
@@ -26,7 +27,7 @@ const Experience = () => {
                 "Engineered <b>MongoDB</b>-based order management system, implementing efficient data handling and automated cleanup processes to optimize system resources.",
                 "Identified and resolved bugs across the full kiosk stack, improving system stability and user experience ahead of successful beta launch."
             ],
-            technicalStack:["JavaScript", "TypeScript", "Node.js", "Vue.js", "Express.js", "MongoDB"]
+            technicalStack: ["JavaScript", "TypeScript", "Node.js", "Vue.js", "Express.js", "MongoDB"]
         },
         {
             title: "Assistant Language Teacher",
@@ -42,7 +43,7 @@ const Experience = () => {
 
     const sectionRef = useRef(null);
 
-     useEffect(() => {
+    useEffect(() => {
         const section = sectionRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
@@ -69,20 +70,18 @@ const Experience = () => {
     }, []);
 
     return (
-        <div data-testid="workExperience" className="flex flex-col bg-inherit min-h-screen pt-12 px-6" id="Experience">
-            <h2 className="text-4xl font-bold mb-12 text-white text-center">Work Experience</h2>
-            
+        <Section ref={sectionRef} className="invisible" data-testid="workExperience" id="Experience" title="Work Experience">
             {/* Timeline container */}
-            <div className="relative max-w-4xl mx-auto">
+            <div className="relative"> {/* Removed max-w-4xl and mx-auto */}
                 {/* Vertical line */}
-                <div ref={sectionRef} className=" invisible absolute left-8 transform -translate-x-1/2 h-full w-1 bg-gray-300 bg-gray-700"></div>
+                <div className="absolute left-8 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div> {/* Removed ref and invisible */}
 
                 {/* Job cards */}
                 {jobs.map((job, index) => (
                     <JobCard key={index} {...job} />
                 ))}
             </div>
-        </div>
+        </Section>
     );
 };
 

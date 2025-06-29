@@ -1,3 +1,4 @@
+import Section from "../section";
 import Anirec1 from "../assets/Anirec/Anirec_Screenshot_1.png";
 import Anirec2 from "../assets/Anirec/Anirec_Screenshot_2.png";
 import Anirec3 from "../assets/Anirec/Anirec_Screenshot_3.png";
@@ -54,16 +55,13 @@ const FeaturedProjects = ()=>{
 
 
     return (
-        <>
-            <div data-testid="Projects" ref={sectionRef} className="invisible w-full py-12 [transform:translateZ(0)]">
-                <h2 className="text-4xl font-bold mb-12 text-white text-center">Featured Projects</h2>
-                <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 gap-8">
+        <Section ref={sectionRef} className= "invisible" data-testid="Projects" id="Projects" title="Featured Projects">
+            <div className="grid grid-cols-1 gap-8">
                     {featuredProjectsData.map((project, index) => (
                          <ProjectDisplay key={index} project={project} />
                     ))}
-                </div>
             </div>
-        </>
+        </Section>
     );
 
 }
