@@ -70,20 +70,15 @@ describe('App Component', () => {
     expect(projects).toBeInTheDocument();
   });
 
-   test('renders project card', () => {
-    render(<App />);
-    const projects = screen.getAllByTestId('ProjectCard');
-    expect(projects[0]).toBeInTheDocument();
-  });
 
-  test('renders project modal and carousel on click of card', async () => {
+  test('renders individual project and its carousel', async () => {
     render(<App />);
     const projects = screen.getAllByTestId('ProjectCard');
     expect(projects[0]).toBeInTheDocument();
     fireEvent.click(projects[0]);
 
-    const projectModal = await screen.getByTestId('ProjectModal');
-    expect(projectModal).toBeInTheDocument();
+    const projectDisplay = await screen.getAllByTestId('ProjectDisplay');
+    expect(projectDisplay[0]).toBeInTheDocument();
     const carousel = await screen.getAllByTestId('Carousel');
     expect(carousel[0]).toBeInTheDocument();
 

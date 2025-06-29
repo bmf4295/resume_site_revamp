@@ -2,9 +2,8 @@ import Anirec1 from "../assets/Anirec/Anirec_Screenshot_1.png";
 import Anirec2 from "../assets/Anirec/Anirec_Screenshot_2.png";
 import Anirec3 from "../assets/Anirec/Anirec_Screenshot_3.png";
 
-import { useState, useRef, useEffect } from "react";
-import ProjectModal from "./projectModal";
-import ProjectCard from "./projectCard";
+import {  useRef, useEffect } from "react";
+import ProjectDisplay from "./projectDisplay";
 
 const featuredProjectsData = [
     {
@@ -25,7 +24,6 @@ const featuredProjectsData = [
 
 //running into a crazy bug on mobile where the modal content is a little blurry. Unfixable for now, but it works fine on desktop. Will revisit later.
 const FeaturedProjects = ()=>{
-  const [selectedProject, setSelectedProject] = useState(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -61,11 +59,10 @@ const FeaturedProjects = ()=>{
                 <h2 className="text-4xl font-bold mb-12 text-white text-center">Featured Projects</h2>
                 <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 gap-8">
                     {featuredProjectsData.map((project, index) => (
-                        <ProjectCard key={index} project={project} onSelect={setSelectedProject} />
+                         <ProjectDisplay key={index} project={project} />
                     ))}
                 </div>
             </div>
-            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
         </>
     );
 

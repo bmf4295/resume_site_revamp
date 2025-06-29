@@ -9,17 +9,28 @@ const Contact = () => {
         <div data-testid="contact" className="flex flex-col pt-8" id="Contact">
             <div className="flex-grow px-6">
                 <h2 className="text-4xl font-bold mb-12 text-white text-center">Contact Me</h2>
-                
+
                 <div className="max-w-2xl mx-auto w-full">
                     {/*Contact Invitation*/}
                     <p className="text-center text-lg text-white mb-12">
-                        I'm open to new opportunities and collaborations. Whether you have a project in mind, 
-                        want to discuss potential opportunities, or just want to connect, feel free to reach out 
+                        I'm open to new opportunities and collaborations. Whether you have a project in mind,
+                        want to discuss potential opportunities, or just want to connect, feel free to reach out
                         through any of the methods below. I will get back to you as soon as possible!
                     </p>
 
                     {/* Contact buttons container */}
                     <div className="flex flex-wrap justify-center gap-6">
+
+                        {/*Resume button*/}
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors"
+                        >
+                             Resume{" "}
+                            <i className="fas fa-external-link-alt text-xs ml-1"></i>
+                        </a>
 
                         {/* LinkedIn Link */}
                         <a
@@ -54,7 +65,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            
+
             {/* Footer at bottom */}
             <Footer />
         </div>

@@ -81,15 +81,6 @@ const NavBar = () => {
             >
               Contact Me
             </a>
-            <a
-              href="/resume.pdf"
-              className="nav-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume{" "}
-              <i className="fas fa-external-link-alt text-xs ml-1"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -140,15 +131,6 @@ const NavBar = () => {
           className="nav-link text-sm"
         >
           Contact Me
-        </a>
-        <a
-          href="/resume.pdf"
-          className="nav-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume{" "}
-          <i className="fas fa-external-link-alt text-xs ml-1"></i>
         </a>
       </div>
     </nav>

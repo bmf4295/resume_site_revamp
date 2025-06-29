@@ -1,48 +1,82 @@
-import SkillBar from '../skillBar';
+import SkillDisplay from '../skillDisplay';
+import {  useRef, useEffect } from "react";
 
 const Skills = () => {
+    // Skill categories and their respective years of professional experience
     const skillCategories = {
         "Programming Languages": [
-            { name: "HTML/CSS", level: 95 },
-            { name: "JavaScript/TypeScript", level: 90 },
-            { name: "Java", level:85 },
-            { name: "SQL", level:85 },
-            { name: "C++", level: 85 },
-            { name: "Python", level: 80 },
-            { name: "C#", level: 75 },
-             { name: "PL/SQL", level: 70 },
+            { name: "HTML/CSS", years: 5 },
+            { name: "JavaScript/TypeScript", years: 4 },
+            { name: "Java", years: 2 },
+            { name: "SQL", years: 2 },
+            { name: "Python", years: 2 },
+            { name: "PL/SQL", years: 2 },
+            { name: "C#", years: 2 },
+            { name: "C++", years: 2 },
         ],
         "Frameworks & Libraries": [
-            { name: "React", level: 95 },
-            { name: "Node.js", level: 95 },
-            { name: "Express.js", level: 85 },
-            { name: "TailwindCSS", level: 80 },
-            { name: "Robot Framework", level: 75 },
-            { name: "Spring Framework", level: 70 },
+            { name: "React", years: 4 },
+            { name: "Node.js", years: 4 },
+            { name: "Express.js", years: 3 },
+            { name: "Robot Framework", years: 2 },
+            { name: "Spring Framework", years: 2 },
+            { name: "TailwindCSS", years: 1 },
+            { name: "Langchain", years: 1 },
         ],
         "Tools & Platforms": [
-            { name: "MongoDB", level: 95 },
-            { name: "PostgresSQL", level: 90 },
-            { name: "Github Copilot", level: 90 },
-            { name: "Oracle Database", level: 85 },
-            { name: "Spring Boot", level: 80 },
-            { name: "Google Firebase", level: 70 },
+            { name: "MongoDB", years: 4 },
+            { name: "PostgresSQL", years: 2 },
+            { name: "Oracle Database", years: 2 },
+            { name: "Spring Boot", years: 2 },
+            { name: "Docker/Podman", years: 2 },
+            { name: "Google Firebase", years: 1 },
+            { name: "Github Copilot", years: 1 },
+            { name: "Large Language Models", years: 1 },
         ],
     };
 
+
+    const sectionRef = useRef(null);
+    
+      useEffect(() => {
+              const section = sectionRef.current;
+              const observer = new IntersectionObserver(
+                  (entries) => {
+                      entries.forEach((entry) => {
+                          if (entry.isIntersecting) {
+                              section.classList.remove('invisible');
+                              section.classList.add('fade-in');
+                              observer.unobserve(section);
+                          }
+                      });
+                  },
+                  { threshold: 0.35 }
+              );
+      
+              if (section) {
+                  observer.observe(section);
+              }
+      
+              return () => {
+                  if (section) {
+                      observer.unobserve(section);
+                  }
+              };
+          }, []);
+
     return (
-        <div data-testid="skills" className="flex flex-col bg-inherit min-h-screen pt-16" id="Skills">
+        <div ref={sectionRef} data-testid="skills" className="flex flex-col bg-inherit min-h-screen pt-16" id="Skills">
             <div className="max-w-4xl mx-auto w-full flex flex-col gap-6">
-                <h2 className="text-4xl font-bold mb-6 text-white text-center">Skill Competencies</h2>
-                
+                <h2 className="text-4xl font-bold mb-6 text-white text-center">Technical Skills</h2>
+
                 {Object.entries(skillCategories).map(([category, skills]) => (
                     <div key={category} className="p-4 bg-gray-900 rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold mb-4 text-white">{category}</h3>
                         {skills.map((skill) => (
-                            <SkillBar 
-                                key={skill.name} 
-                                name={skill.name} 
-                                level={skill.level} 
+                            <SkillDisplay
+                                key={skill.name}
+                                name={skill.name}
+                                years={skill.years}
                             />
                         ))}
                     </div>
