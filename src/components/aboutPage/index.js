@@ -20,7 +20,7 @@ const About = () => {
                 {/* Right column - Text content */}
                 <div className=" md:w-2/3 space-y-4 self-center"> 
                     <p className="text-left text-base md:text-lg lg:text-xl text-white">
-                    Hi, I'm Brady Friese, a U.S.-based full-stack developer with experience working across cultures and teams. After spending the past year in Japan, I'm looking for a collaborative, mission-driven, and fast-paced environment where I can help build intuitive, scalable software that makes a difference in the lives of everyone.
+                    Hi, I'm Brady Friese, a U.S.-based full-stack developer with 3 years of professional experience working across cultures and teams. After spending the past year in Japan, I'm looking for a collaborative, mission-driven, and fast-paced environment where I can help build intuitive, scalable software that makes a difference in the lives of everyone.
                     </p>
                 </div>
             </div>

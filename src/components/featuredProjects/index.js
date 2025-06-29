@@ -9,7 +9,7 @@ import ProjectDisplay from "./projectDisplay";
 const featuredProjectsData = [
     {
         title: "Anirec.io",
-        description: "Anirec.io is a web app that recommends new anime based on a user’s favorite title. Built with React and Vite, powered by GPT-4o via Langchain and the Anichart GraphQL API, it features a responsive UI and natural language input. As the sole developer, I implemented the recommendation logic, API integrations, and front-end design.",
+        description: "Anirec.io is a web app that recommends new anime based on a user's favorite title. Built with React and Vite, powered by GPT-4o via Langchain and the Anichart GraphQL API, it features a responsive UI and natural language input. As the sole developer, I implemented the recommendation logic, API integrations, and front-end design.",
         keypoints: ["Developed full-stack anime recommendation web app using React, Vite, Express,js, and GraphQL.", 
             "Integrated GPT-4o with Langchain for natural language-powered recommendations.",
             "Created a responsive UI with Tailwind CSS",
