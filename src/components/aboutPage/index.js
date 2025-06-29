@@ -46,13 +46,7 @@ const About = () => {
                 {/* Right column - Text content */}
                 <div className=" md:w-2/3 space-y-4 self-center"> {/* Added self-center */}
                     <p className="text-left text-base md:text-lg lg:text-xl text-white">
-                       I'm a full-stack software developer with 3 years of experience building enterprise applications using Java, JavaScript/TypeScript, React.js, Node.js, and SQL.
-                    </p>
-                    <p className="text-left text-base md:text-lg lg:text-xl text-white">
-                       I've led frontend efforts on large-scale platforms and enjoy working across the stack to deliver intuitive, scalable solutions.
-                    </p>
-                    <p className="text-left text-base md:text-lg lg:text-xl text-white">
-                       After gaining valuable professional experience in Japan, I'm now seeking new opportunities on a mission-driven team where I can help solve real-world problems with clean, reliable code.
+                    Hi, I'm Brady Friese, a U.S.-based full-stack developer with experience working across cultures and teams. After spending the past year in Japan, I'm looking for a collaborative, mission-driven, and fast-paced environment where I can help build intuitive, scalable software that makes a difference in the lives of everyone.
                     </p>
                 </div>
             </div>
