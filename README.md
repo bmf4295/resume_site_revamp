@@ -64,7 +64,7 @@ Builds the app for production to the `build` folder. It correctly bundles React 
 
 The build is minified and the filenames include the hashes.
 
-### 'npm run deploy'
+### `npm run deploy`
 
 Runs the predeploy npm script and deploys it to github pages.
 
