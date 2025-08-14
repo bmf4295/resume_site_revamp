@@ -2,6 +2,7 @@ import Section from "../section";
 import Anirec1 from "../assets/Anirec/Anirec_Screenshot_1.png";
 import Anirec2 from "../assets/Anirec/Anirec_Screenshot_2.png";
 import Anirec3 from "../assets/Anirec/Anirec_Screenshot_3.png";
+import DrawPhase from "../assets/DrawPhase/DrawPhase.png"
 
 import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 import ProjectDisplay from "./projectDisplay";
@@ -20,6 +21,19 @@ const featuredProjectsData = [
         technologies: ["JavaScript","React.js", "Vite",  "TailwindCSS", "GraphQL", "GPT-4o", "Langchain", "Express.js","Node.js"  ],
         github: "https://github.com/bmf4295/anime-ai-rec",
         link: "https://anirec-io.onrender.com"
+    },
+    {
+        title:"DrawPhase: CURRENTLY IN DEVELOPMENT",
+        description: "DrawPhase is an online matchmaking platform for card game players to find and connect with opponents to play their favorite card game with. Players can create their account and add friends, as well as connect and play with anyone via video and text chat. Please note this is currently in early development, and will be updated frequently.",
+        keypoints: ["Building Google OAuth system for quick account creation and login.",
+            "Implementing matchmaking queue for players to find games.",
+            "Integrating WebRTC for video and text chat.",
+            "Developing friend system for easy player connections.",
+        ],
+        images: [DrawPhase],
+        technologies: ["TypeScript","React.js", "Vite",  "TailwindCSS", "PostgreSQL", "Redis", "WebRTC", "Docker", "Express.js", "Node.js"],
+        github: "",
+        link: ""
     }
 ];
 

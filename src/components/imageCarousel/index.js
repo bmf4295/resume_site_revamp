@@ -28,18 +28,23 @@ const ImageCarousel = ({ images }) => {
 
     return (
         <div data-testid="Carousel" className="relative w-full aspect-video bg-black/20 rounded-lg overflow-hidden">
-            <img 
+            <img
                 key={currentIndex}
-                src={images[currentIndex]} 
-                alt="Project screenshot" 
-                className={`w-full h-full object-contain rounded-lg ${animationClass}`} 
+                src={images[currentIndex]}
+                alt="Project screenshot"
+                className={`w-full h-full object-contain rounded-lg ${animationClass}`}
             />
-            <button onClick={goToPrevious} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-opacity">
-                <i className="fas fa-chevron-left"></i>
-            </button>
-            <button onClick={goToNextImage} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-opacity">
-                <i className="fas fa-chevron-right"></i>
-            </button>
+            {images.length > 1 && (
+                <>
+                    <button onClick={goToPrevious} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-opacity">
+                        <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button onClick={goToNextImage} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-opacity">
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+                </>
+            )}
+
         </div>
     );
 };
