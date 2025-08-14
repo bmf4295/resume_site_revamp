@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.cb365664.css",
-    "main.js": "/static/js/main.661662f8.js",
-    "static/js/453.bd2d782c.chunk.js": "/static/js/453.bd2d782c.chunk.js",
+    "main.js": "/static/js/main.87a875d6.js",
+    "static/js/453.f627edfb.chunk.js": "/static/js/453.f627edfb.chunk.js",
     "static/media/background.jpg": "/static/media/background.24bc6af703e2209adc70.jpg",
     "static/media/Anirec_Screenshot_2.png": "/static/media/Anirec_Screenshot_2.85f3db008cb23cc79aa3.png",
     "static/media/headshot.jpg": "/static/media/headshot.91876f77e317f2496dc7.jpg",
     "static/media/Anirec_Screenshot_1.png": "/static/media/Anirec_Screenshot_1.9c008f2ecd197802aafd.png",
     "static/media/Anirec_Screenshot_3.png": "/static/media/Anirec_Screenshot_3.0d58cbac7060eb3300e1.png",
+    "static/media/DrawPhase.png": "/static/media/DrawPhase.263c4bcc338d8588a2f5.png",
     "index.html": "/index.html",
     "main.cb365664.css.map": "/static/css/main.cb365664.css.map",
-    "main.661662f8.js.map": "/static/js/main.661662f8.js.map",
-    "453.bd2d782c.chunk.js.map": "/static/js/453.bd2d782c.chunk.js.map"
+    "main.87a875d6.js.map": "/static/js/main.87a875d6.js.map",
+    "453.f627edfb.chunk.js.map": "/static/js/453.f627edfb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb365664.css",
-    "static/js/main.661662f8.js"
+    "static/js/main.87a875d6.js"
   ]
 }
